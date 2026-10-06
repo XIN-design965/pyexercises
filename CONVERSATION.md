@@ -66,3 +66,20 @@ sample_dict = {"name": "alpha", "cost": 100, "revenue": 150}
 ```
 
 What function does the `keys()` method serve in a dictionary?
+
+---
+## 2026-10-06 15:09, in .
+
+**Me:** how to add a string in python
+
+**Tutor:**
+
+Concatenating strings in Python.
+
+```python
+# TODO: complete the line below
+greeting = "Hello"  # TODO: add ", world!" to this string
+print(greeting)
+```
+
+What function joins two strings together?

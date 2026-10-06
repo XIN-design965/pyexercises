@@ -26,10 +26,17 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My two fields, and what I would do with them:
+# 1. In:name and age of the user
+# 2. Process: joined the name and the age in the same statement
+# 3. Out: a sentence with the name and age that we got from the user
+# 4. My two fields, and what I would do with them: the name is a personal input from the user that i used to join and print
 
 
 # Your code below
+name = input("Enter your name:")
+age = input("Enter you age:")
+
+# print(name)
+# print(age)
+# print(name+age)
+print("Hello, " + name + "! you are " + age + " years old.")
