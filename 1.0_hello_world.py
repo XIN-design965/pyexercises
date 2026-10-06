@@ -22,11 +22,14 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My message, and why:
+# 1. In:a string of my name.
+# 2. Process: use for loop to iterate, add line number before the text each iteration.
+# 3. Out:numberd lines showing my name.
+# 4. My message, and why: "XIN ZHAO". This is my name, simple and meaningful for me.
 
 
 # Your code below
-print("Sugumaran")
+repeat_times = 3
+text = "XIN ZHAO"
+for line_num in range(1, repeat_times + 1):
+    print(f"{line_num}. {text}")
