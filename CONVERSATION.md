@@ -83,3 +83,21 @@ print(greeting)
 ```
 
 What function joins two strings together?
+
+---
+## 2026-10-06 15:28, in .
+
+**Me:** how to add two variables in python?
+
+**Tutor:**
+
+Adding two variables in Python is done with the `+` operator.
+
+```python
+# TODO: replace alpha and beta with your variables
+a = 5
+b = 3
+result = a + b
+```
+
+What is the operator used to add two numbers in Python?
