@@ -26,10 +26,10 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What my list is about, and what I computed from it:
+# 1. In:A list of eight cities where the business operates.
+# 2. Process:Display the list, select one city, sort the cities, and count them.
+# 3. Out:The whole list, one selected city, the sorted list, and the number of cities.
+# 4. What my list is about, and what I computed from it:My list contains the cities where the business operates. I computed the number of cities because it shows the geographical reach of the business.
 
 
 # Your code below
