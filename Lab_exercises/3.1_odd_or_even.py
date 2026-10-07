@@ -24,10 +24,29 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What happens on 0, on a negative number, on a very large number:
+# 1. In:An integer N entered by the user.
+# 2. Process:Validate N, then use a loop and the modulus operator to check each number.
+# 3. Out:Every number from 1 to N is displayed as either odd or even.
+# 4. What happens on 0, on a negative number, on a very large number:The program displays an error and asks again. Only numbers from 1 to 518 are accepted.
 
 
 # Your code below
+while True:
+    # Get a number from user and convert to integer
+    n = int(input("Enter a number N: "))
+    # Check boundary conditions
+    if n == 0:
+        print("N cannot be zero. Please enter a positive integer.")
+    elif n < 0:
+        print("N cannot be negative. Please enter a positive integer.")
+    elif n > 518:
+        print("N is too large. Please enter a number from 1 to 518.")
+    else:
+        break
+
+# Run only after the user enters a valid number
+for num in range(1, n + 1):
+    if num % 2 == 0:
+        print(f"{num} is even")
+    else:
+        print(f"{num} is odd")
