@@ -101,3 +101,40 @@ result = a + b
 ```
 
 What is the operator used to add two numbers in Python?
+
+---
+## 2026-10-07 14:05, in .
+
+**Me:** What is the title() function?
+
+**Tutor:**
+
+The title() function changes every word in a string to start with a capital letter and the rest in lower case.
+
+```python
+def format_name(name):
+    # TODO: use title() to return the name in title case
+    return name
+
+# Example
+print(format_name("john doe"))  # should print "John Doe"
+```
+
+What is the only argument that title() takes?
+
+---
+## 2026-10-07 14:07, in .
+
+**Me:** what is strip() used?
+
+**Tutor:**
+
+The `strip()` method removes leading and trailing whitespace (spaces, tabs, newlines) from a string.
+
+```python
+# TODO: remove spaces around the word
+text = "  hello  "
+clean_text = text.strip()
+```
+
+What does `strip()` do to the string `"\t  good morning\n  "`?

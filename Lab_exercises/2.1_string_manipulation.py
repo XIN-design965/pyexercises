@@ -24,10 +24,28 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
+# 1. In:A sentence entered by the user.
+# 2. Process:Remove spaces from both ends and apply four different transformations.
+# 3. Out:Four transformed versions of the sentence are displayed.
 # 4. My four transformations, and when each is useful:
+# strip() + upper(): removes spaces at both ends and creates uppercase text for emphasis.
+# strip() + lower(): removes spaces at both ends and standardizes text for comparison.
+# strip() + replace(): removes spaces at both ends and replaces spaces with underscores for filenames.
+# strip() + title(): removes spaces at both ends and capitalizes each word for titles.
 
 
 # Your code below
+# ask user for a sentence
+sentence = input("Enter a sentence: ")
+
+# remove spaces at both ends, and convert all characters to uppercase
+print("Upper()     :", sentence.strip().upper())
+
+# remove spaces at both ends, and convert all characters to lowercase
+print("Lower()     :", sentence.strip().lower())
+
+# remove spaces at both ends, and replace spaces with underscores
+print("Replace()   :", sentence.strip().replace(" ", "_"))
+
+# remove spaces at both ends, and capitalise the first letter of each word
+print("Title()     :", sentence.strip().title())
