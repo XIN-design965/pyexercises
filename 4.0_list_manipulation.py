@@ -37,9 +37,27 @@ num1 = 2
 num2 = 3 
 num3 = 4
 
-number = [1, 2, 3]
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
 
 print(num1)
 print(num2)
 print(num3)
-print(number[0])
+print(number[2])
+
+# list before sort
+print("List before sorting: ", number)
+
+# sorting the list
+number.sort()
+
+# printing the sorted list
+print("The sorted list is:", list)
+
+
+# removing the list item rom the list
+list.pop()
+
+# print the list after removing the list number
+print("The list after removing the list:" list)
+
+

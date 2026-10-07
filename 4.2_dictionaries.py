@@ -30,3 +30,6 @@ DELIVERABLE
 
 
 # Your code below
+name = "John Doe"
+age = "30"
+occupation = 
