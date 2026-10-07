@@ -233,3 +233,23 @@ def second_item(items):
 ```
 
 What is the index of the first element in any list?
+
+---
+## 2026-10-07 15:03, in .
+
+**Me:** what is copy()
+
+**Tutor:**
+
+Copying a list means creating a new list with the same items so that changes to the new list do not affect the original.
+
+```python
+# Concept: creating an independent copy of a list
+original = [10, 20, 30]
+copied = original.copy()  # TODO: write .copy() here
+
+copied[0] = 99
+print(original[0])  # TODO: what will this print?
+```
+
+What is the name of the method that returns a shallow copy of a list?

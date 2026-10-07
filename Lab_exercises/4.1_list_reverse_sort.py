@@ -25,10 +25,40 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My four orders, and which ones modify the original:
+# 1. In:The list of business cities created in Exercise 4.0.
+# 2. Process:Process: Create reordered lists without changing the original list.
+# 3. Out:The cities in four different orders, followed by the original list.
+# 4. My four orders, and which ones modify the original:The four orders are original, alphabetical, reverse alphabetical, and reversed original order. sorted() creates new lists, while reverse() modifies a copied list in place. The original list is never modified.
 
 
 # Your code below
+# Original list from Exercise 4.0
+business_cities = [
+    "Shanghai",
+    "Hangzhou",
+    "Guangzhou",
+    "Beijing",
+    "Wuhan",
+    "Kunming",
+    "Tianjing",
+    "Nanjing"
+]
+
+# 1. Display the original order
+print("Original order:", business_cities)
+
+# 2. Display the cities in alphabetical order
+alphabetical_cities = sorted(business_cities)
+print("Alphabetical order:", alphabetical_cities)
+
+# 3. Display the cities in reverse alphabetical order
+reverse_alphabetical = sorted(business_cities, reverse=True)
+print("Reverse alphabetical order:", reverse_alphabetical)
+
+# 4. Display the cities in reversed original order
+reversed_cities = business_cities.copy()
+reversed_cities.reverse()
+print("Reversed original order:", reversed_cities)
+
+# Prove that the original list has not changed
+print("Original list at the end:", business_cities)
