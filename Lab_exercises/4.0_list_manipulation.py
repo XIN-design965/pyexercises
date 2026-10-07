@@ -33,31 +33,28 @@ DELIVERABLE
 
 
 # Your code below
-num1 = 2
-num2 = 3 
-num3 = 4
+# Cities where the business operates
+business_cities = [
+    "Shanghai",
+    "Hangzhou",
+    "Guangzhou",
+    "Beijing",
+    "Wuhan",
+    "Kunming",
+    "Tianjing",
+    "Nanjing"
+]
 
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
+# Display the whole list
+print("The whole list:", business_cities)
 
-print(num1)
-print(num2)
-print(num3)
-print(number[2])
+# Display one city of my choice
+print("One selected city:", business_cities[2])
 
-# list before sort
-print("List before sorting: ", number)
+# Display the cities in alphabetical order
+sorted_cities = sorted(business_cities)
+print("The sorted list:", sorted_cities)
 
-# sorting the list
-number.sort()
-
-# printing the sorted list
-print("The sorted list is:", list)
-
-
-# removing the list item rom the list
-list.pop()
-
-# print the list after removing the list number
-print("The list after removing the list:" list)
-
-
+# Calculate the number of cities
+number_of_cities = len(business_cities)
+print("The business operates in", number_of_cities, "cities.")
