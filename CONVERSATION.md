@@ -138,3 +138,22 @@ clean_text = text.strip()
 ```
 
 What does `strip()` do to the string `"\t  good morning\n  "`?
+
+---
+## 2026-10-07 14:16, in .
+
+**Me:** what is if function
+
+**Tutor:**
+
+The **if statement** is a conditional block that runs code only when a condition is true.
+
+```python
+def check_budget(available, cost):
+    if cost <= available:
+        return "Enough funds"
+    else:
+        return "Insufficient funds"
+```
+
+What does the condition `cost <= available` compare?

@@ -24,10 +24,10 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What happens when the second number is zero, and why:
+# 1. In:Two numbers entered by the user.
+# 2. Process:Add, subtract, multiply, and divide the two numbers.
+# 3. Out:The sum, difference, product, and division result are displayed.
+# 4. What happens when the second number is zero, and why: Division is skipped and a message is displayed because division by zero is not allowed.
 
 
 # Your code below
@@ -50,9 +50,8 @@ product = num1 * num2
 print("The product of two numbers is:", product)
 
 # finding the division of two numbers
-
 if num2 != 0:
     division = num1 / num2
     print("The division of two numbers is: ", division)
 else:
-    print("the number 2 is zero")
+    print("Cannot divide, because the second number is zero.")
