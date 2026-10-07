@@ -28,10 +28,38 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My stop condition, my attempt limit, my summary:
+# 1. In:An integer from 1 to 100 entered by the user.
+# 2. Process:Compare each guess with the secret number and count each attempt.
+# 3. Out:A high, low, or correct message, followed by a summary.
+# 4. My stop condition, my attempt limit, my summary:The loop stops when the user guesses 66 or uses all five attempts. The summary shows the attempts used and whether the number was guessed.
 
 
 # Your code below
+secret_number = 66
+max_attempts = 5
+attempts = 0
+guessed_correctly = False
+
+while attempts < max_attempts:
+    guess = int(input("Guess a number from 1 to 100: "))
+    attempts = attempts + 1
+
+    if guess < 1 or guess > 100:
+        print("Please enter a number from 1 to 100.")
+    elif guess == secret_number:
+        guessed_correctly = True
+        print("Correct! You guessed the number.")
+        break
+    elif guess < secret_number:
+        print("Too low.")
+    else:
+        print("Too high.")
+
+# Display a summary
+print("Summary:")
+print(f"Attempts used: {attempts}")
+
+if guessed_correctly:
+    print("You guessed the correct number.")
+else:
+    print(f"You did not guess the number. It was {secret_number}.")
