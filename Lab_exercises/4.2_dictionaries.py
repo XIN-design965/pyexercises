@@ -12,7 +12,7 @@ ANSWER THESE FIRST, in comments at the top of your file
        A field you would never actually use does not count.
 
 WHAT THE AI CANNOT KNOW
-    Your object and your fields. A campaign, a customer, a product, a store, a supplier.
+    Your object and your fields. A campaign, a customer, a product, a product, a supplier.
     Choose something you would genuinely have to describe in your job.
 
 CHECK IT YOURSELF
@@ -23,13 +23,42 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My object, my five fields, and why those:
+# 1. In:A product dictionary and a field name entered by the user.
+# 2. Process:Read, update, remove, search for, and display dictionary fields.
+# 3. Out:The requested information and every remaining product field and value.
+# 4. My object, my five fields, and why those:My object is a software product. The five fields are product ID, product name, city, product manager, and monthly sales. They identify the product, show where it operates, who manages it, and how well it performs.
 
 
 # Your code below
-name = "John Doe"
-age = "30"
-occupation = 
+product = {
+    "product_id": "HZ001",
+    "product_name": "Metallic_gate_software",
+    "city": "Hangzhou",
+    "product_manager": "ZHAO Xin",
+    "monthly_sales": 120000
+}
+
+# Read one field
+print("Product name:", product["product_name"])
+
+# Change one field
+product["monthly_sales"] = 125000
+print("Updated monthly sales:", product["monthly_sales"])
+
+# Remove one field
+removed_product_manager = product.pop("product_manager")
+print("Removed product manager:", removed_product_manager)
+
+# Ask for a field and handle a field that does not exist
+requested_field = input("Enter a field name: ")
+
+if requested_field in product:
+    print(requested_field, ":", product[requested_field])
+else:
+    print("That field does not exist.")
+
+# Display every remaining field and its value
+print("Remaining product information:")
+
+for field, value in product.items():
+    print(field, ":", value)
