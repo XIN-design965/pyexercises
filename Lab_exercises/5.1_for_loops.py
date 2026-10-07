@@ -24,10 +24,25 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What I compute for each item, and why it is worth showing:
-
+# 1. In:The list of business cities created in Exercise 4.0.
+# 2. Process:Loop through every city and calculate the length of its name.
+# 3. Out:One line for each city showing its position, name, and name length.
+# 4. What I compute for each item, and why it is worth showing:I computed the length of each city name. The reader learns each city's position in the list and how many characters its name contains.
 
 # Your code below
+# List copied from Exercise 4.0
+business_cities = [
+    "Shanghai",
+    "Hangzhou",
+    "Guangzhou",
+    "Beijing",
+    "Wuhan",
+    "Kunming",
+    "Tianjin",
+    "Nanjing"
+]
+
+# Process every item in the list
+for position, city in enumerate(business_cities, start=1):
+    name_length = len(city)
+    print(f"{position}. {city} has {name_length} characters.")

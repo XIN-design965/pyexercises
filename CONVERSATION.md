@@ -303,3 +303,32 @@ What is the syntax to add a new key-value pair to a dictionary?
 **Tutor:**
 
 Refused, off topic.
+
+---
+## 2026-10-07 16:08, in .
+
+**Me:** how to use enumerate function?
+
+**Tutor:**
+
+The enumerate function adds a counter to an iterable.
+
+```python
+# TODO: replace the list with your data
+items = ['apple', 'banana', 'cherry']
+
+# TODO: write the loop that prints each item with its index
+for ??? in ???(???):
+    print(???)
+```
+
+What must the first argument of enumerate be?
+
+---
+## 2026-10-07 16:10, in .
+
+**Me:** when should i use[], and when should i use {}
+
+**Tutor:**
+
+Refused, off topic.
