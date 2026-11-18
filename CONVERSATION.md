@@ -417,3 +417,40 @@ def check_score(score):
 ```
 
 What function and argument decide the delimiter when you read a CSV file?
+
+---
+## 2026-11-18 12:57, in .
+
+**Me:** in this code: def add_numbers(num1, num2). Can you explain what def mean?
+
+**Tutor:**
+
+The keyword `def` is short for “define” and starts a function definition.
+
+```python
+def add_numbers(num1, num2):   # TODO: what do the parentheses hold?
+    result = num1 + num2
+    return result
+```
+
+What are the two things inside the parentheses called?
+
+---
+## 2026-11-18 12:58, in .
+
+**Me:** what return None mean?
+
+**Tutor:**
+
+A function returns None when it finishes without a return statement or when it has a bare return.
+
+```python
+def greet(name):
+    print(f"Hello, {name}")   # no return → returns None
+
+# --- cut by the tutor: One function per answer. The next one is yours to write ---
+```
+
+What does `result = greet("Alex")` contain after this call?
+
+*Cut by the tutor: One function per answer. The next one is yours to write.*
