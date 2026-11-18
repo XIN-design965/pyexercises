@@ -49,3 +49,105 @@ DELIVERABLE
 
 
 # Your code below
+# What is wrong with names.txt (found by reading it, not by guessing):
+# - There are two empty lines that do not contain a name.
+# - Some lines start with extra spaces.
+# - The first names do not use consistent capitalisation.
+# - The last names do not use consistent capitalisation.
+# - One name has three words, including the surname particle "van".
+
+# 1. In:
+# - The input is names.txt.
+# - It contains one person's name per non-empty line.
+# - The lines contain inconsistent spaces and capitalisation.
+
+# 2. Process, problem by problem:
+# - Remove spaces at the beginning and end of each line.
+# - Ignore lines that are empty after removing spaces.
+# - Split each valid line into separate words.
+# - Normalise the capitalisation of every name.
+# - Keep surname particles such as "van" in lower case.
+# - Sort the cleaned names by the last word of each line.
+
+# 3. Out:
+# - The output is cleaned_names.txt.
+# - It contains eight cleaned names, one per line, sorted by last name.
+# - The original names.txt file is not modified.
+
+# 4. How I decide which word is the last name:
+# - The file follows the format "first name followed by last name".
+# - Therefore, for a two-word line, the second word is the last name.
+# - More generally, I use the final word as the sorting key.
+# - In "Guido van Rossum", Rossum is the sorting key and "van" stays in the
+#   displayed name as part of the surname.
+
+from pathlib import Path
+
+
+# Store both files next to this Python script.
+BASE_DIR = Path(__file__).resolve().parent
+INPUT_FILE = BASE_DIR / "names.txt"
+OUTPUT_FILE = BASE_DIR / "cleaned_names.txt"
+
+# These particles normally remain lower-case inside a name.
+LOWERCASE_PARTICLES = {"van", "von", "de", "da", "del"}
+
+
+# Clean one non-empty line and return one consistently formatted name.
+def clean_name(line):
+    words = line.strip().split()
+    cleaned_words = []
+
+    for index, word in enumerate(words):
+        lowercase_word = word.lower()
+
+        if index > 0 and lowercase_word in LOWERCASE_PARTICLES:
+            cleaned_words.append(lowercase_word)
+        else:
+            cleaned_words.append(lowercase_word.capitalize())
+
+    return " ".join(cleaned_words)
+
+
+# Return the final word so that sort() orders the list by last name.
+def last_name_key(full_name):
+    return full_name.split()[-1].casefold()
+
+
+# Read the original file without changing it.
+def load_and_clean_names(file_path):
+    cleaned_names = []
+    input_line_count = 0
+
+    with file_path.open("r", encoding="utf-8") as input_file:
+        for line in input_file:
+            input_line_count += 1
+            if line.strip():
+                cleaned_names.append(clean_name(line))
+
+    return cleaned_names, input_line_count
+
+
+# Write a different file, with one name on each line.
+def save_names(file_path, names):
+    with file_path.open("w", encoding="utf-8") as output_file:
+        for name in names:
+            output_file.write(name + "\n")
+
+
+def main():
+    try:
+        names, input_line_count = load_and_clean_names(INPUT_FILE)
+    except FileNotFoundError:
+        print(f"Input file not found: {INPUT_FILE.name}")
+        return
+
+    names.sort(key=last_name_key)
+    save_names(OUTPUT_FILE, names)
+
+    print(f"Read {input_line_count} input lines.")
+    print(f"Saved {len(names)} cleaned names to {OUTPUT_FILE.name}.")
+
+
+if __name__ == "__main__":
+    main()
